@@ -12,6 +12,7 @@
 #
 
 class User < ApplicationRecord
+  #has_many_to :products
   has_secure_password validations: false
   validates :email, uniqueness: true, format: /@/
   validates :password, presence: true, on: :create
